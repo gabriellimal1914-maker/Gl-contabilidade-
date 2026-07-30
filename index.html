@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===================== SEO ===================== -->
+<title>GL Contabilidade Digital | Abra seu CNPJ Grátis e Cresça com Tecnologia</title>
+<meta name="description" content="Contabilidade digital para MEIs, pequenas e médias empresas. Abertura de CNPJ grátis, BPO financeiro, planejamento tributário e atendimento humanizado. Responsável técnico CRC-SP 1SP363928.">
+<meta name="keywords" content="contabilidade digital, abrir CNPJ grátis, contador MEI, BPO financeiro, planejamento tributário, escritório de contabilidade online, contabilidade para pequenas empresas">
+<meta name="author" content="GL Contabilidade Digital e Gestão Empresarial">
+<link rel="canonical" href="https://www.glcontabilidade.com.br/">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GL Contabilidade Digital">
+<meta property="og:title" content="GL Contabilidade Digital | Abra seu CNPJ Grátis">
+<meta property="og:description" content="Contabilidade, impostos e gestão financeira para o seu negócio crescer. Atendimento humanizado + tecnologia. Abra seu CNPJ sem custo.">
+<meta property="og:image" content="https://www.glcontabilidade.com.br/assets/logo-gl.png">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://www.glcontabilidade.com.br/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GL Contabilidade Digital | Abra seu CNPJ Grátis">
+<meta name="twitter:description" content="Contabilidade, impostos e gestão financeira para o seu negócio crescer.">
+<meta name="twitter:image" content="https://www.glcontabilidade.com.br/assets/logo-gl.png">
+
+<link rel="icon" href="assets/logo-gl.png" type="image/png">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "GL Contabilidade Digital e Gestão Empresarial",
+  "image": "https://www.glcontabilidade.com.br/assets/logo-gl.png",
+  "url": "https://www.glcontabilidade.com.br/",
+  "telephone": "+55-11-00000-0000",
+  "priceRange": "$$",
+  "areaServed": "BR",
+  "founder": {
+    "@type": "Person",
+    "name": "Gabriel De Lima",
+    "jobTitle": "Contador — Responsável Técnico",
+    "identifier": "CRC-SP 1SP363928"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "BR"
+  },
+  "sameAs": [
+    "https://www.instagram.com/"
+  ]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800;900&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.4.1/tailwind.min.js"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          navy: { DEFAULT: '#0A1E42', 2: '#0F2A5C', 3: '#132F66' },
+          royal: { DEFAULT: '#2452E8', light: '#5B7FEF', 50: '#EEF2FE' },
+          ice: '#F4F7FC',
+          slate: { soft: '#5B6472' },
+          line: '#E3E9F5'
+        },
+        fontFamily: {
+          display: ['Manrope', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+          mono: ['IBM Plex Mono', 'monospace']
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Lucide Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lucide-static/0.383.0/umd/lucide.min.js"></script>
+
+<style>
+  :root{
+    --navy:#0A1E42; --navy-2:#0F2A5C; --royal:#2452E8; --royal-light:#5B7FEF; --ice:#F4F7FC; --line:#E3E9F5;
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif; color:var(--navy); background:#fff; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Manrope',sans-serif;}
+  .font-mono{font-variant-numeric: tabular-nums;}
+
+  ::selection{background:var(--royal); color:#fff;}
+
+  /* Ledger dot-grid signature pattern */
+  .ledger-grid{
+    background-image: radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .ledger-grid-light{
+    background-image: radial-gradient(rgba(10,30,66,0.10) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Eyebrow label — recurring mono/ledger tic */
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:.72rem; letter-spacing:.14em; font-weight:600; text-transform:uppercase;
+  }
+  .eyebrow::before{content:"// "; opacity:.55;}
+
+  /* Scroll reveal */
+  .reveal{ opacity:0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.2,.65,.3,1), transform .7s cubic-bezier(.2,.65,.3,1); }
+  .reveal.is-visible{ opacity:1; transform:none; }
+  .reveal-stagger > * { transition-delay: calc(var(--i,0) * 90ms); }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1!important; transform:none!important; transition:none!important;}
+    *{scroll-behavior:auto!important;}
+  }
+
+  /* Ascending bars signature graphic (mirrors logo motif) */
+  .bars-decor span{
+    display:block; width:100%; border-radius:3px;
+    background:linear-gradient(180deg, var(--royal-light), var(--royal));
+    animation: rise 2.6s ease-in-out infinite;
+  }
+  .bars-decor span:nth-child(1){animation-delay:.0s;}
+  .bars-decor span:nth-child(2){animation-delay:.15s;}
+  .bars-decor span:nth-child(3){animation-delay:.3s;}
+  .bars-decor span:nth-child(4){animation-delay:.45s;}
+  @keyframes rise{ 0%,100%{transform:scaleY(.72);} 50%{transform:scaleY(1);} }
+  .bars-decor span{transform-origin:bottom;}
+
+  /* nav shrink shadow */
+  #site-nav.scrolled{ box-shadow: 0 8px 30px -12px rgba(10,30,66,.18); }
+
+  /* card hover lift */
+  .lift{ transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }
+  .lift:hover{ transform: translateY(-6px); box-shadow: 0 24px 48px -20px rgba(10,30,66,.25); }
+
+  /* CTA pulse ring */
+  .cta-pulse{ position:relative; }
+  .cta-pulse::after{
+    content:""; position:absolute; inset:-6px; border-radius:inherit;
+    border:2px solid rgba(36,82,232,.35); animation: pulse-ring 2.4s ease-out infinite;
+  }
+  @keyframes pulse-ring{ 0%{opacity:.8; transform:scale(1);} 100%{opacity:0; transform:scale(1.12);} }
+
+  /* FAQ */
+  details > summary{ list-style:none; cursor:pointer; }
+  details > summary::-webkit-details-marker{ display:none; }
+  details[open] .faq-icon{ transform: rotate(45deg); }
+  .faq-icon{ transition: transform .3s ease; }
+  details .faq-body{
+    display:grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease;
+  }
+  details[open] .faq-body{ grid-template-rows: 1fr; }
+  .faq-body-inner{ overflow:hidden; }
+
+  /* Whatsapp float */
+  #wa-float{ transition: width .35s cubic-bezier(.2,.7,.2,1), box-shadow .3s; }
+
+  /* mobile menu */
+  #mobile-menu{ transition: max-height .4s ease, opacity .3s ease; }
+
+  .num-tag{font-family:'IBM Plex Mono',monospace; font-weight:600;}
+
+  .ring-line{ border:1px solid var(--line); }
+
+  .grad-navy{ background:linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 55%, var(--royal) 130%); }
+</style>
+</head>
+
+<body class="bg-white">
+
+<!-- ============================================================ -->
+<!-- NAV -->
+<!-- ============================================================ -->
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 bg-white/90 backdrop-blur-md border-b border-line transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="flex items-center justify-between h-[74px]">
+      <a href="#home" class="flex items-center gap-2.5 shrink-0">
+        <img src="assets/logo-gl.png" alt="GL Contabilidade Digital" class="h-10 w-10 rounded-full object-cover">
+        <div class="leading-tight hidden sm:block">
+          <p class="font-display font-extrabold text-navy text-[15px] tracking-tight">GL Contabilidade</p>
+          <p class="text-[10px] text-slate-soft font-mono tracking-wide">DIGITAL &amp; GESTÃO EMPRESARIAL</p>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-[14.5px] font-medium text-navy/80">
+        <a href="#home" class="hover:text-royal transition-colors">Home</a>
+        <a href="#servicos" class="hover:text-royal transition-colors">Serviços</a>
+        <a href="#planos" class="hover:text-royal transition-colors">Planos</a>
+        <a href="#bpo" class="hover:text-royal transition-colors">BPO Financeiro</a>
+        <a href="#sobre" class="hover:text-royal transition-colors">Sobre</a>
+        <a href="#contato" class="hover:text-royal transition-colors">Contato</a>
+      </nav>
+
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="#contato" class="px-4 py-2.5 rounded-full text-[14px] font-semibold text-navy border border-line hover:border-royal hover:text-royal transition-colors">Solicitar Proposta</a>
+        <a href="#cnpj-gratis" class="px-5 py-2.5 rounded-full text-[14px] font-semibold text-white bg-royal hover:bg-navy-2 transition-colors shadow-lg shadow-royal/25">🚀 Abra seu CNPJ Grátis</a>
+      </div>
+
+      <button id="menu-btn" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full border border-line" aria-label="Abrir menu">
+        <i data-lucide="menu" class="w-5 h-5 text-navy"></i>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="lg:hidden max-h-0 opacity-0 overflow-hidden border-t border-line bg-white">
+    <div class="px-5 py-5 flex flex-col gap-4 text-[15px] font-medium text-navy">
+      <a href="#home" class="menu-link">Home</a>
+      <a href="#servicos" class="menu-link">Serviços</a>
+      <a href="#planos" class="menu-link">Planos</a>
+      <a href="#bpo" class="menu-link">BPO Financeiro</a>
+      <a href="#sobre" class="menu-link">Sobre</a>
+      <a href="#contato" class="menu-link">Contato</a>
+      <div class="flex flex-col gap-2.5 pt-2">
+        <a href="#contato" class="menu-link w-full text-center px-4 py-2.5 rounded-full border border-line font-semibold">Solicitar Proposta</a>
+        <a href="#cnpj-gratis" class="menu-link w-full text-center px-4 py-2.5 rounded-full bg-royal text-white font-semibold">🚀 Abra seu CNPJ Grátis</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section id="home" class="relative overflow-hidden pt-[74px]">
+  <div class="absolute inset-0 ledger-grid-light opacity-70 [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,black,transparent)]"></div>
+  <div class="absolute -top-40 -right-40 w-[520px] h-[520px] rounded-full bg-royal/10 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-5 md:px-8 pt-14 md:pt-20 pb-20 md:pb-28 grid lg:grid-cols-[1.05fr,0.95fr] gap-14 items-center">
+
+    <div class="reveal is-visible">
+      <p class="eyebrow text-royal mb-5">Contabilidade digital para MEIs e empresas</p>
+      <h1 class="font-display font-extrabold text-[2.4rem] leading-[1.08] sm:text-[3rem] sm:leading-[1.06] md:text-[3.4rem] md:leading-[1.05] text-navy tracking-tight">
+        A contabilidade digital que ajuda sua empresa a <span class="text-royal">crescer</span>.
+      </h1>
+      <p class="mt-6 text-[17px] md:text-[18px] text-slate-soft max-w-xl leading-relaxed">
+        Cuidamos da contabilidade, impostos e gestão financeira para que você possa focar no crescimento do seu negócio.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#cnpj-gratis" class="cta-pulse px-7 py-4 rounded-full bg-royal text-white font-semibold text-[15px] shadow-xl shadow-royal/30 hover:bg-navy-2 transition-colors">🚀 Abra seu CNPJ Grátis</a>
+        <a href="#contato" class="px-7 py-4 rounded-full border border-line text-navy font-semibold text-[15px] hover:border-royal hover:text-royal transition-colors">Solicitar Proposta</a>
+      </div>
+
+      <div class="mt-11 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="shield-check" class="w-5 h-5 text-royal"></i>
+          <span class="text-[13.5px] font-medium text-navy/80">Responsável técnico CRC-SP</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="users" class="w-5 h-5 text-royal"></i>
+          <span class="text-[13.5px] font-medium text-navy/80">Atendimento humanizado</span>
+        </div>
+        <div class="flex items-center gap-2.5">
+          <i data-lucide="cpu" class="w-5 h-5 text-royal"></i>
+          <span class="text-[13.5px] font-medium text-navy/80">100% digital</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:.12s">
+      <div class="relative mx-auto max-w-[380px]">
+        <!-- signature ascending-bars backdrop -->
+        <div class="absolute -bottom-8 -left-8 w-40 h-28 bars-decor grid grid-cols-4 gap-2 items-end opacity-70 pointer-events-none">
+          <span style="height:38%"></span><span style="height:62%"></span><span style="height:48%"></span><span style="height:85%"></span>
+        </div>
+        <div class="absolute -top-10 -right-8 w-24 h-24 rounded-full bg-royal/15 blur-2xl"></div>
+
+        <div class="relative rounded-[28px] overflow-hidden ring-line shadow-2xl shadow-navy/15 bg-ice">
+          <img src="assets/gabriel-de-lima.png" alt="Gabriel De Lima, contador responsável técnico da GL Contabilidade" class="w-full h-[440px] object-cover object-top">
+          <div class="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/0 to-transparent"></div>
+
+          <div class="absolute bottom-0 inset-x-0 p-5">
+            <div class="bg-white/95 backdrop-blur rounded-2xl p-4 shadow-lg">
+              <p class="font-display font-bold text-navy text-[15px]">Gabriel De Lima</p>
+              <p class="text-[12.5px] text-slate-soft">Contador · Responsável Técnico</p>
+              <p class="text-[11px] font-mono text-royal mt-1 tracking-wide">CRC-SP 1SP363928</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -top-5 -left-5 sm:-left-10 bg-white rounded-2xl shadow-xl px-4 py-3 flex items-center gap-2.5 ring-line">
+          <div class="w-9 h-9 rounded-full bg-royal-50 flex items-center justify-center shrink-0">
+            <i data-lucide="badge-check" class="w-5 h-5 text-royal"></i>
+          </div>
+          <p class="text-[11.5px] font-semibold text-navy leading-tight max-w-[150px]">Responsável Técnico registrado no CRC-SP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BENEFÍCIOS -->
+<!-- ============================================================ -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="eyebrow text-royal mb-4">Por que a GL</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] text-navy leading-tight tracking-tight">Tecnologia e cuidado humano, na mesma equipe.</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-stagger">
+      <!-- Benefit cards injected via loop-like manual blocks -->
+      <div class="reveal lift group p-7 rounded-3xl ring-line border bg-ice/60" style="--i:0">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="heart-handshake" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Atendimento Humanizado</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Um time de verdade, acessível quando você precisa — sem robôs de menu infinito.</p>
+      </div>
+      <div class="reveal lift p-7 rounded-3xl ring-line border bg-ice/60" style="--i:1">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="smartphone" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Atendimento Digital</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Resolva tudo pelo WhatsApp, e-mail ou painel online, de onde estiver.</p>
+      </div>
+      <div class="reveal lift p-7 rounded-3xl ring-line border bg-ice/60" style="--i:2">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Especialistas Contábeis</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Time técnico registrado no CRC, atualizado com a legislação vigente.</p>
+      </div>
+      <div class="reveal lift p-7 rounded-3xl ring-line border bg-ice/60" style="--i:3">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="layout-dashboard" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">BPO Financeiro</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Fluxo de caixa, contas a pagar e receber organizados fora da sua empresa.</p>
+      </div>
+      <div class="reveal lift p-7 rounded-3xl ring-line border bg-ice/60" style="--i:4">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="briefcase" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Consultoria Empresarial</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Direção estratégica para decisões financeiras e tributárias mais seguras.</p>
+      </div>
+      <div class="reveal lift p-7 rounded-3xl ring-line border bg-ice/60" style="--i:5">
+        <div class="w-12 h-12 rounded-2xl bg-navy flex items-center justify-center mb-5"><i data-lucide="rocket" class="w-6 h-6 text-white"></i></div>
+        <h3 class="font-display font-bold text-navy text-lg mb-2">Tecnologia</h3>
+        <p class="text-slate-soft text-[14.5px] leading-relaxed">Sistemas modernos que automatizam o que é repetitivo — e liberam tempo pra você.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SERVIÇOS -->
+<!-- ============================================================ -->
+<section id="servicos" class="py-20 md:py-28 bg-ice">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="eyebrow text-royal mb-4">Serviços</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] text-navy leading-tight tracking-tight">Tudo que sua empresa precisa, em um só lugar.</h2>
+    </div>
+
+    <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="calculator" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Contabilidade</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Escrituração contábil completa e obrigações em dia.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="file-plus-2" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Abertura de Empresas</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">CNPJ registrado do jeito certo, sem burocracia pra você.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="trending-down" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Planejamento Tributário</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Enquadramento e regime que pagam menos imposto, dentro da lei.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="users-round" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Departamento Pessoal</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Folha, admissões e desligamentos sem dor de cabeça.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="briefcase" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Consultoria Empresarial</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Diagnóstico financeiro e plano de ação para crescer com segurança.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="wallet" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">BPO Financeiro</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Sua área financeira operando fora da empresa, com indicadores claros.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="file-check-2" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Regularização</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Pendências fiscais e cadastrais resolvidas para sua empresa ficar limpa.</p>
+      </div>
+      <div class="reveal lift bg-white p-6 rounded-2xl ring-line border">
+        <i data-lucide="receipt" class="w-6 h-6 text-royal mb-4"></i>
+        <h3 class="font-display font-bold text-navy text-[15px] mb-1.5">Imposto de Renda</h3>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">Declaração de IR pessoa física e jurídica, sem erros e sem atraso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- DESTAQUE — ABRA SEU CNPJ GRÁTIS -->
+<!-- ============================================================ -->
+<section id="cnpj-gratis" class="relative overflow-hidden grad-navy py-20 md:py-28">
+  <div class="absolute inset-0 ledger-grid opacity-40"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-royal/20 blur-3xl"></div>
+
+  <div class="relative max-w-4xl mx-auto px-5 md:px-8 text-center reveal">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-white/90 text-[12.5px] font-mono mb-7">
+      <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Oferta de lançamento
+    </div>
+    <h2 class="font-display font-extrabold text-white text-[2.1rem] leading-tight sm:text-4xl md:text-5xl tracking-tight">
+      🚀 Abra seu CNPJ Grátis
+    </h2>
+    <p class="mt-6 text-white/80 text-[17px] md:text-lg max-w-2xl mx-auto leading-relaxed">
+      Abrimos sua empresa sem custo de abertura.* Você cuida da ideia, a gente cuida da papelada — do registro ao primeiro imposto.
+    </p>
+    <div class="mt-10">
+      <a href="#contato" class="cta-pulse inline-block px-9 py-4.5 rounded-full bg-white text-navy font-bold text-[16px] shadow-2xl hover:bg-ice transition-colors">Solicitar abertura</a>
+    </div>
+    <p class="mt-6 text-white/50 text-[12px]">*Isenção referente à taxa de honorários de abertura. Custas e taxas de órgãos públicos, quando aplicáveis, não estão incluídas.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BPO FINANCEIRO -->
+<!-- ============================================================ -->
+<section id="bpo" class="py-20 md:py-28 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <p class="eyebrow text-royal mb-4">BPO Financeiro</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.4rem] text-navy leading-tight tracking-tight">Muito mais do que contabilidade: sua área financeira, gerida por especialistas.</h2>
+      <p class="mt-5 text-slate-soft text-[15.5px] leading-relaxed max-w-lg">Terceirize a operação financeira do seu negócio e tenha indicadores claros para decidir com segurança — todos os dias, não só no fechamento do mês.</p>
+
+      <div class="mt-9 grid sm:grid-cols-2 gap-x-8 gap-y-4">
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Fluxo de Caixa</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Contas a Pagar</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Contas a Receber</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Conciliação Bancária</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Indicadores</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Dashboards</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Automação Financeira</span></div>
+        <div class="flex items-center gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-royal shrink-0"></i><span class="text-[14.5px] font-medium text-navy">Relatórios Gerenciais</span></div>
+      </div>
+
+      <a href="#contato" class="mt-9 inline-block px-7 py-3.5 rounded-full bg-navy text-white font-semibold text-[14.5px] hover:bg-royal transition-colors">Falar sobre BPO Financeiro</a>
+    </div>
+
+    <!-- illustration: abstract dashboard mockup built in CSS/SVG, echoing logo bars -->
+    <div class="reveal" style="transition-delay:.1s">
+      <div class="relative bg-ice rounded-[28px] p-6 md:p-8 ring-line border shadow-xl shadow-navy/5">
+        <div class="flex items-center justify-between mb-6">
+          <div>
+            <p class="text-[11px] font-mono text-slate-soft tracking-wide">SALDO CONSOLIDADO</p>
+            <p class="font-display font-extrabold text-navy text-2xl mt-1">R$ 128.450<span class="text-slate-soft text-base">,00</span></p>
+          </div>
+          <div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-royal-50 text-royal text-[12px] font-semibold">
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i> 18%
+          </div>
+        </div>
+
+        <div class="grid grid-cols-6 gap-2.5 items-end h-40 mb-6">
+          <div class="bars-decor col-span-6 grid grid-cols-6 gap-2.5 items-end h-full">
+            <span style="height:38%"></span><span style="height:55%"></span><span style="height:44%"></span>
+            <span style="height:70%"></span><span style="height:60%"></span><span style="height:88%"></span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="bg-white rounded-xl p-4 ring-line border">
+            <div class="flex items-center gap-2 text-slate-soft text-[12px] mb-2"><i data-lucide="arrow-down-circle" class="w-4 h-4"></i>Contas a Pagar</div>
+            <p class="font-display font-bold text-navy text-lg">R$ 12.320</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 ring-line border">
+            <div class="flex items-center gap-2 text-slate-soft text-[12px] mb-2"><i data-lucide="arrow-up-circle" class="w-4 h-4"></i>Contas a Receber</div>
+            <p class="font-display font-bold text-navy text-lg">R$ 34.980</p>
+          </div>
+        </div>
+
+        <div class="absolute -bottom-5 -right-5 bg-navy text-white rounded-2xl px-4 py-3 shadow-xl flex items-center gap-2.5">
+          <i data-lucide="bar-chart-3" class="w-5 h-5 text-royal-light"></i>
+          <span class="text-[12.5px] font-semibold">Dashboards em tempo real</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- PLANOS -->
+<!-- ============================================================ -->
+<section id="planos" class="py-20 md:py-28 bg-ice">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl mx-auto text-center reveal">
+      <p class="eyebrow text-royal mb-4 justify-center flex">Planos</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] text-navy leading-tight tracking-tight">Um plano para cada momento da sua empresa.</h2>
+      <p class="mt-4 text-slate-soft text-[15.5px]">Valores sob consulta — fale com a gente e receba uma proposta sob medida.</p>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-3 gap-6 items-start">
+
+      <!-- START -->
+      <div class="reveal lift bg-white rounded-3xl p-8 ring-line border">
+        <p class="eyebrow text-slate-soft mb-3">Plano</p>
+        <h3 class="font-display font-extrabold text-navy text-2xl">START</h3>
+        <p class="text-slate-soft text-[14px] mt-1.5">Ideal para MEIs</p>
+        <p class="font-mono text-navy text-sm mt-6 mb-6">Consulte valores</p>
+        <ul class="space-y-3.5 mb-8">
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Contabilidade mensal completa</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Emissão de notas fiscais</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Guias de impostos (DAS)</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Suporte via WhatsApp</li>
+        </ul>
+        <a href="#contato" class="block text-center px-5 py-3.5 rounded-full border border-line text-navy font-semibold text-[14.5px] hover:border-royal hover:text-royal transition-colors">Solicitar Proposta</a>
+      </div>
+
+      <!-- PRO — destacado -->
+      <div class="reveal lift relative bg-navy rounded-3xl p-8 shadow-2xl shadow-navy/30 lg:-translate-y-4">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-royal text-white text-[12px] font-bold flex items-center gap-1.5 whitespace-nowrap">
+          <i data-lucide="star" class="w-3.5 h-3.5 fill-white"></i> Mais Escolhido
+        </div>
+        <p class="eyebrow text-white/50 mb-3 mt-2">Plano</p>
+        <h3 class="font-display font-extrabold text-white text-2xl">PRO</h3>
+        <p class="text-white/60 text-[14px] mt-1.5">Ideal para pequenas empresas</p>
+        <p class="font-mono text-white text-sm mt-6 mb-6">Consulte valores</p>
+        <ul class="space-y-3.5 mb-8">
+          <li class="flex items-start gap-2.5 text-[14px] text-white/90"><i data-lucide="check" class="w-4.5 h-4.5 text-royal-light mt-0.5 shrink-0"></i>Tudo do plano START</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-white/90"><i data-lucide="check" class="w-4.5 h-4.5 text-royal-light mt-0.5 shrink-0"></i>Departamento Pessoal (folha)</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-white/90"><i data-lucide="check" class="w-4.5 h-4.5 text-royal-light mt-0.5 shrink-0"></i>Planejamento tributário</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-white/90"><i data-lucide="check" class="w-4.5 h-4.5 text-royal-light mt-0.5 shrink-0"></i>Relatórios gerenciais mensais</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-white/90"><i data-lucide="check" class="w-4.5 h-4.5 text-royal-light mt-0.5 shrink-0"></i>Consultor dedicado</li>
+        </ul>
+        <a href="#contato" class="block text-center px-5 py-3.5 rounded-full bg-royal text-white font-semibold text-[14.5px] hover:bg-royal-light transition-colors">Solicitar Proposta</a>
+      </div>
+
+      <!-- PREMIUM -->
+      <div class="reveal lift bg-white rounded-3xl p-8 ring-line border">
+        <p class="eyebrow text-slate-soft mb-3">Plano</p>
+        <h3 class="font-display font-extrabold text-navy text-2xl">PREMIUM</h3>
+        <p class="text-slate-soft text-[14px] mt-1.5">Empresas em crescimento</p>
+        <p class="font-mono text-navy text-sm mt-6 mb-6">Consulte valores</p>
+        <ul class="space-y-3.5 mb-8">
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Tudo do plano PRO</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>BPO Financeiro completo</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Dashboards e indicadores</li>
+          <li class="flex items-start gap-2.5 text-[14px] text-navy/85"><i data-lucide="check" class="w-4.5 h-4.5 text-royal mt-0.5 shrink-0"></i>Consultoria empresarial contínua</li>
+        </ul>
+        <a href="#contato" class="block text-center px-5 py-3.5 rounded-full border border-line text-navy font-semibold text-[14.5px] hover:border-royal hover:text-royal transition-colors">Solicitar Proposta</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- SOBRE -->
+<!-- ============================================================ -->
+<section id="sobre" class="py-20 md:py-28 bg-white">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 grid lg:grid-cols-[0.85fr,1.15fr] gap-14 items-center">
+
+    <div class="reveal">
+      <div class="relative max-w-[360px] mx-auto lg:mx-0">
+        <div class="rounded-[28px] overflow-hidden ring-line shadow-xl">
+          <img src="assets/gabriel-de-lima.png" alt="Gabriel De Lima, contador CRC-SP 1SP363928" class="w-full h-[420px] object-cover object-top">
+        </div>
+        <div class="absolute -bottom-6 -right-4 sm:-right-8 bg-white rounded-2xl shadow-xl p-4 ring-line flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-navy flex items-center justify-center shrink-0"><i data-lucide="award" class="w-5 h-5 text-white"></i></div>
+          <div>
+            <p class="font-display font-bold text-navy text-[13.5px] leading-tight">CRC-SP 1SP363928</p>
+            <p class="text-[11.5px] text-slate-soft">Responsável Técnico</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:.1s">
+      <p class="eyebrow text-royal mb-4">Sobre</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.3rem] text-navy leading-tight tracking-tight mb-2">Gabriel De Lima</h2>
+      <p class="text-slate-soft text-[14.5px] font-medium mb-6">Responsável Técnico · CRC-SP 1SP363928</p>
+
+      <blockquote class="text-navy/85 text-[16px] leading-relaxed space-y-4 border-l-2 border-royal/30 pl-6">
+        <p>"Meu nome é Gabriel De Lima, contador registrado no CRC-SP sob o nº 1SP363928.</p>
+        <p>Após anos de experiência em auditoria, contabilidade e consultoria empresarial, fundei a GL Contabilidade Digital e Gestão Empresarial com a missão de oferecer uma contabilidade moderna, estratégica e próxima do empresário.</p>
+        <p>Nosso compromisso é simplificar a gestão financeira dos nossos clientes por meio de tecnologia, atendimento humanizado e soluções que vão muito além das obrigações fiscais."</p>
+      </blockquote>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice text-navy text-[13px] font-semibold"><i data-lucide="shield-check" class="w-4 h-4 text-royal"></i>CRC-SP</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice text-navy text-[13px] font-semibold"><i data-lucide="user-round" class="w-4 h-4 text-royal"></i>Atendimento personalizado</span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ice text-navy text-[13px] font-semibold"><i data-lucide="graduation-cap" class="w-4 h-4 text-royal"></i>Especialista Contábil</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- DEPOIMENTOS -->
+<!-- ============================================================ -->
+<section class="py-20 md:py-28 bg-ice">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="max-w-2xl reveal">
+      <p class="eyebrow text-royal mb-4">Depoimentos</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.6rem] text-navy leading-tight tracking-tight">A opinião de quem confia na GL.</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-5">
+      <div class="reveal bg-white rounded-3xl p-7 ring-line border border-dashed flex flex-col items-center text-center justify-center min-h-[220px]">
+        <i data-lucide="quote" class="w-7 h-7 text-royal/40 mb-3"></i>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">O depoimento de um cliente aparecerá aqui em breve.</p>
+      </div>
+      <div class="reveal bg-white rounded-3xl p-7 ring-line border border-dashed flex flex-col items-center text-center justify-center min-h-[220px]" style="transition-delay:.08s">
+        <i data-lucide="quote" class="w-7 h-7 text-royal/40 mb-3"></i>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">O depoimento de um cliente aparecerá aqui em breve.</p>
+      </div>
+      <div class="reveal bg-white rounded-3xl p-7 ring-line border border-dashed flex flex-col items-center text-center justify-center min-h-[220px]" style="transition-delay:.16s">
+        <i data-lucide="quote" class="w-7 h-7 text-royal/40 mb-3"></i>
+        <p class="text-slate-soft text-[13.5px] leading-relaxed">O depoimento de um cliente aparecerá aqui em breve.</p>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-slate-soft text-[13.5px] reveal">É nosso cliente? <a href="#contato" class="text-royal font-semibold hover:underline">Envie sua avaliação</a> e apareça aqui.</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FAQ -->
+<!-- ============================================================ -->
+<section class="py-20 md:py-28 bg-white">
+  <div class="max-w-3xl mx-auto px-5 md:px-8">
+    <div class="text-center reveal">
+      <p class="eyebrow text-royal mb-4 justify-center flex">Perguntas frequentes</p>
+      <h2 class="font-display font-extrabold text-3xl md:text-[2.4rem] text-navy leading-tight tracking-tight">Ainda com dúvidas?</h2>
+    </div>
+
+    <div class="mt-12 space-y-3 reveal">
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          Quanto tempo leva para abrir um CNPJ?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">Depende do órgão responsável em cada município, mas o processo costuma ser concluído em poucos dias úteis após o envio de toda a documentação.</div></div>
+      </details>
+
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          Já tenho contador, consigo migrar para a GL?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">Sim. Cuidamos de toda a transição — solicitação de documentos e transferência de responsabilidade técnica — sem que você precise se preocupar com nada.</div></div>
+      </details>
+
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          Atendem empresas de todo o Brasil?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">Sim, nosso atendimento é 100% digital, então trabalhamos com empresas em qualquer estado do país.</div></div>
+      </details>
+
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          O que exatamente é o BPO Financeiro?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">É a terceirização da rotina financeira da sua empresa — contas a pagar e receber, conciliação bancária e relatórios — com uma equipe dedicada e dashboards claros.</div></div>
+      </details>
+
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          Como funciona o atendimento no dia a dia?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">Você tem um canal direto via WhatsApp com um especialista humano, além de suporte por e-mail para o que for necessário.</div></div>
+      </details>
+
+      <details class="group ring-line border rounded-2xl px-6 py-2 bg-ice/50">
+        <summary class="flex items-center justify-between py-4 font-display font-semibold text-navy text-[15px]">
+          Quais documentos preciso para começar?
+          <i data-lucide="plus" class="faq-icon w-5 h-5 text-royal shrink-0"></i>
+        </summary>
+        <div class="faq-body"><div class="faq-body-inner text-slate-soft text-[14.5px] leading-relaxed pb-4">Para abertura, geralmente RG, CPF, comprovante de endereço e a definição da atividade da empresa. Nossa equipe te orienta em cada etapa.</div></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- CTA FINAL -->
+<!-- ============================================================ -->
+<section id="contato" class="relative overflow-hidden grad-navy py-20 md:py-28">
+  <div class="absolute inset-0 ledger-grid opacity-40"></div>
+  <div class="relative max-w-3xl mx-auto px-5 md:px-8 text-center reveal">
+    <h2 class="font-display font-extrabold text-white text-[2.1rem] leading-tight sm:text-4xl md:text-[3rem] tracking-tight">Pronto para abrir sua empresa?</h2>
+    <p class="mt-5 text-white/75 text-[16px] md:text-lg">Fale com nosso time e comece hoje mesmo, sem burocracia.</p>
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="https://wa.me/5511000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GL%20Contabilidade%20Digital%20e%20gostaria%20de%20abrir%20minha%20empresa%20gratuitamente." target="_blank" rel="noopener" class="cta-pulse px-9 py-4.5 rounded-full bg-white text-navy font-bold text-[16px] shadow-2xl hover:bg-ice transition-colors">🚀 Abra seu CNPJ Grátis</a>
+      <a href="https://wa.me/5511000000000" target="_blank" rel="noopener" class="px-9 py-4.5 rounded-full border border-white/30 text-white font-semibold text-[16px] hover:bg-white/10 transition-colors">Solicitar Proposta</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer class="bg-navy text-white/70 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 md:px-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div>
+        <a href="#home" class="flex items-center gap-2.5 mb-4">
+          <img src="assets/logo-gl.png" alt="GL Contabilidade Digital" class="h-10 w-10 rounded-full object-cover">
+          <span class="font-display font-extrabold text-white text-[15px]">GL Contabilidade</span>
+        </a>
+        <p class="text-[13.5px] leading-relaxed max-w-xs">Contabilidade digital com atendimento humanizado para MEIs, pequenas e médias empresas.</p>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white text-[14px] mb-4">Navegação</p>
+        <ul class="space-y-2.5 text-[13.5px]">
+          <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+          <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+          <li><a href="#planos" class="hover:text-white transition-colors">Planos</a></li>
+          <li><a href="#bpo" class="hover:text-white transition-colors">BPO Financeiro</a></li>
+          <li><a href="#sobre" class="hover:text-white transition-colors">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white text-[14px] mb-4">Contato</p>
+        <ul class="space-y-2.5 text-[13.5px]">
+          <li class="flex items-center gap-2"><i data-lucide="instagram" class="w-4 h-4"></i>@glcontabilidade</li>
+          <li class="flex items-center gap-2"><i data-lucide="message-circle" class="w-4 h-4"></i>WhatsApp</li>
+          <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>contato@glcontabilidade.com.br</li>
+          <li class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i>(11) 00000-0000</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="font-display font-bold text-white text-[14px] mb-4">Institucional</p>
+        <ul class="space-y-2.5 text-[13.5px]">
+          <li>Gabriel De Lima — CRC-SP 1SP363928</li>
+          <li><a href="#" class="hover:text-white transition-colors">Política de Privacidade</a></li>
+          <li><a href="#" class="hover:text-white transition-colors">LGPD</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[12.5px] text-white/40">
+      <p>© 2026 GL Contabilidade Digital e Gestão Empresarial. Todos os direitos reservados.</p>
+      <p class="font-mono">CRC-SP 1SP363928</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- WHATSAPP FLOAT -->
+<!-- ============================================================ -->
+<a id="wa-float" href="https://wa.me/5511000000000?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20GL%20Contabilidade%20Digital%20e%20gostaria%20de%20abrir%20minha%20empresa%20gratuitamente." target="_blank" rel="noopener"
+   class="fixed bottom-6 right-6 z-50 flex items-center gap-3 h-14 pl-4 pr-4 rounded-full bg-navy text-white shadow-2xl shadow-navy/40 overflow-hidden hover:bg-royal">
+  <i data-lucide="message-circle" class="w-6 h-6 shrink-0"></i>
+  <span id="wa-label" class="text-[13.5px] font-semibold whitespace-nowrap max-w-0 opacity-0 overflow-hidden transition-all duration-300">Fale com um especialista</span>
+</a>
+
+<script>
+  lucide.createIcons();
+
+  // Nav shrink shadow
+  const nav = document.getElementById('site-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 12);
+  });
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+  function setMenu(open){
+    menuOpen = open;
+    mobileMenu.style.maxHeight = open ? mobileMenu.scrollHeight + 'px' : '0px';
+    mobileMenu.style.opacity = open ? '1' : '0';
+    menuBtn.innerHTML = open ? '<i data-lucide="x" class="w-5 h-5 text-navy"></i>' : '<i data-lucide="menu" class="w-5 h-5 text-navy"></i>';
+    lucide.createIcons();
+  }
+  menuBtn.addEventListener('click', () => setMenu(!menuOpen));
+  document.querySelectorAll('.menu-link').forEach(l => l.addEventListener('click', () => setMenu(false)));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => io.observe(el));
+
+  // WhatsApp float hover label
+  const wa = document.getElementById('wa-float');
+  const waLabel = document.getElementById('wa-label');
+  wa.addEventListener('mouseenter', () => { waLabel.style.maxWidth = '220px'; waLabel.style.opacity = '1'; waLabel.style.marginLeft='2px'; });
+  wa.addEventListener('mouseleave', () => { waLabel.style.maxWidth = '0px'; waLabel.style.opacity = '0'; waLabel.style.marginLeft='0px'; });
+</script>
+
+</body>
+</html>
